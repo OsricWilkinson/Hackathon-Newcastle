@@ -1,12 +1,11 @@
-﻿using Hackathon_Newcastle.Models;
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
 
-namespace Hackathon_Newcastle.GameContext
+namespace Hackathon_Newcastle.Entities
 {
     public class GameContext : DbContext
     {
-        public GameContext() 
-            : base()
+        public GameContext(DbContextOptions<GameContext> options)
+            : base(options)
         {
 
         }

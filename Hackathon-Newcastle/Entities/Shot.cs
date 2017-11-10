@@ -5,7 +5,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Hackathon_Newcastle.Models
+namespace Hackathon_Newcastle.Entities
 {
     public class Shot
     {
