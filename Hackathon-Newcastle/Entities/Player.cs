@@ -12,7 +12,7 @@ namespace Hackathon_Newcastle.Entities
         public Guid PlayerId { get; set; }
 
         [Required]
-        [MaxLength(20, ErrorMessage = "Name too Long")]
+        [MaxLength(20, ErrorMessage = "Player name too Long")]
         public string Name { get; set; }
 
         [Required]
@@ -22,6 +22,5 @@ namespace Hackathon_Newcastle.Entities
         public virtual Game Game { get; set; }
 
         public virtual ICollection<Ship> Ships { get; set; } = new List<Ship>();
-
     }
 }

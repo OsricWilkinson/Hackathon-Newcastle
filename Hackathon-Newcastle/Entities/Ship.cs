@@ -22,7 +22,7 @@ namespace Hackathon_Newcastle.Entities
         [Required]
         public string Direction { get; set; }
 
-        public bool Distroyes { get; set; }
+        public bool IsDistroyed { get; set; }
 
         [Required]
         [ForeignKey(nameof(Player))]
