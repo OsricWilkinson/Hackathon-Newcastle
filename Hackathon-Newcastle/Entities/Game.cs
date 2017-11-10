@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
-namespace Hackathon_Newcastle.Models
+namespace Hackathon_Newcastle.Entities
 {
     public class Game
     {

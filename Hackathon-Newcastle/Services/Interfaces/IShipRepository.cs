@@ -1,8 +1,8 @@
-﻿using Hackathon_Newcastle.Models;
+﻿using Hackathon_Newcastle.Entities;
 using System;
 using System.Collections.Generic;
 
-namespace Hackathon_Newcastle.Interfaces
+namespace Hackathon_Newcastle.Services
 {
     public interface IShipRepository
     {

@@ -1,0 +1,13 @@
+﻿body {
+    position: relative;
+}
+    #input
+{
+    position: absolute;
+    top: calc(100vh - 5em);
+}
+
+#output {
+    position: absolute;
+   
+}
