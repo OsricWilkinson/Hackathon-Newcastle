@@ -2,6 +2,8 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp2.0</TargetFramework>
+    <RootNamespace>Hackathon_Newcastle</RootNamespace>
+    <AssemblyName>Hackathon_Newcastle</AssemblyName>
   </PropertyGroup>
 
   <ItemGroup>
