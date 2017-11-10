@@ -2,7 +2,7 @@
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace Hackathon_Newcastle.Models
+namespace Hackathon_Newcastle.Entities
 {
     public class Shot
     {
