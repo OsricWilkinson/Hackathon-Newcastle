@@ -14,8 +14,13 @@ using Hackathon_Newcastle.Entities;
 
 namespace Hackathon_Newcastle
 {
+
+
     public class Startup
     {
+
+        private WebsocketManager wsManager = new WebsocketManager();
+
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
@@ -72,7 +77,9 @@ namespace Hackathon_Newcastle
                     if (context.WebSockets.IsWebSocketRequest)
                     {
                         WebSocket webSocket = await context.WebSockets.AcceptWebSocketAsync();
-                        await Echo(context, webSocket);
+
+                        await wsManager.AddSocket(webSocket);
+                       // await Echo(context, webSocket);
                     }
                     else
                     {
