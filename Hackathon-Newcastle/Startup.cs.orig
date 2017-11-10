@@ -1,19 +1,29 @@
 ﻿using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
+<<<<<<< HEAD
 using Microsoft.AspNetCore.Mvc.Formatters;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Newtonsoft.Json.Serialization;
+=======
+using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.DependencyInjection;
+>>>>>>> master
 using System;
 using System.Net.WebSockets;
 using System.Threading;
 using System.Threading.Tasks;
+<<<<<<< HEAD
 using Hackathon_Newcastle.Entities;
+=======
+>>>>>>> master
 
 namespace Hackathon_Newcastle
 {
+
+
     public class Startup
     {
 
@@ -29,6 +39,7 @@ namespace Hackathon_Newcastle
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+<<<<<<< HEAD
             // Add framework services.
             services.AddMvc(options =>
             {
@@ -54,6 +65,11 @@ namespace Hackathon_Newcastle
                 connectionString = Environment.GetEnvironmentVariable(connectionName, EnvironmentVariableTarget.Machine);
             }
             services.AddDbContext<GameContext>(o => o.UseSqlServer(connectionString));
+=======
+            services.AddMvc();
+          
+                
+>>>>>>> master
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -77,7 +93,7 @@ namespace Hackathon_Newcastle
                         WebSocket webSocket = await context.WebSockets.AcceptWebSocketAsync();
 
                         await wsManager.AddSocket(webSocket);
-                        // await Echo(context, webSocket);
+                       // await Echo(context, webSocket);
                     }
                     else
                     {

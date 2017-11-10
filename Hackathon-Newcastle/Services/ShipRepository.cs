@@ -1,33 +1,32 @@
-﻿using Hackathon_Newcastle.Interfaces;
-using Hackathon_Newcastle.Models;
+﻿using Hackathon_Newcastle.Entities;
 using System;
 using System.Collections.Generic;
 
-namespace Hackathon_Newcastle.Repositories
+namespace Hackathon_Newcastle.Services
 {
-    public class ShotRepository : IShotRepository
+    public class ShipRepository : IShipRepository
     {
-        public void AddShot(Shot shot)
+        public void AddShip(Ship ship)
         {
             throw new NotImplementedException();
         }
 
-        public void DeleteShot(Shot shot)
+        public void DeleteShip(Ship ship)
         {
             throw new NotImplementedException();
         }
 
-        public IEnumerable<Shot> GetShot()
+        public IEnumerable<Ship> GetShip()
         {
             throw new NotImplementedException();
         }
 
-        public Shot GetShot(Guid shotId)
+        public Ship GetShip(Guid shipId)
         {
             throw new NotImplementedException();
         }
 
-        public IEnumerable<Shot> GetShots(IEnumerable<Guid> shotId)
+        public IEnumerable<Ship> GetShips(IEnumerable<Guid> shipId)
         {
             throw new NotImplementedException();
         }
@@ -37,12 +36,12 @@ namespace Hackathon_Newcastle.Repositories
             throw new NotImplementedException();
         }
 
-        public bool ShotExists(Guid shotId)
+        public bool ShipExists(Guid shipId)
         {
             throw new NotImplementedException();
         }
 
-        public void UpdateShot(Shot shot)
+        public void UpdateShip(Ship ship)
         {
             throw new NotImplementedException();
         }

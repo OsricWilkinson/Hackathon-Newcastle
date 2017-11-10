@@ -1,38 +1,32 @@
-﻿using Hackathon_Newcastle.Interfaces;
-using Hackathon_Newcastle.Models;
+﻿using Hackathon_Newcastle.Entities;
 using System;
 using System.Collections.Generic;
 
-namespace Hackathon_Newcastle.Repositories
+namespace Hackathon_Newcastle.Services
 {
-    public class GameRepository : IGameRepository
+    public class ShotRepository : IShotRepository
     {
-        public void AddGame(Game game)
+        public void AddShot(Shot shot)
         {
             throw new NotImplementedException();
         }
 
-        public void DeleteGame(Game game)
+        public void DeleteShot(Shot shot)
         {
             throw new NotImplementedException();
         }
 
-        public bool GameExists(Guid gameId)
+        public IEnumerable<Shot> GetShot()
         {
             throw new NotImplementedException();
         }
 
-        public IEnumerable<Game> GetGame()
+        public Shot GetShot(Guid shotId)
         {
             throw new NotImplementedException();
         }
 
-        public Game GetGame(Guid gameId)
-        {
-            throw new NotImplementedException();
-        }
-
-        public IEnumerable<Game> GetGames(IEnumerable<Guid> gameId)
+        public IEnumerable<Shot> GetShots(IEnumerable<Guid> shotId)
         {
             throw new NotImplementedException();
         }
@@ -42,7 +36,12 @@ namespace Hackathon_Newcastle.Repositories
             throw new NotImplementedException();
         }
 
-        public void UpdateGame(Game game)
+        public bool ShotExists(Guid shotId)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void UpdateShot(Shot shot)
         {
             throw new NotImplementedException();
         }

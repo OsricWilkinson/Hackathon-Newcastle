@@ -1,33 +1,37 @@
-﻿using Hackathon_Newcastle.Interfaces;
-using Hackathon_Newcastle.Models;
+﻿using Hackathon_Newcastle.Entities;
 using System;
 using System.Collections.Generic;
 
-namespace Hackathon_Newcastle.Repositories
+namespace Hackathon_Newcastle.Services
 {
-    public class ShipRepository : IShipRepository
+    public class PlayerRepository : IPlayerRepository
     {
-        public void AddShip(Ship ship)
+        public void AddPlayer(Player player)
         {
             throw new NotImplementedException();
         }
 
-        public void DeleteShip(Ship ship)
+        public void DeletePlayer(Player player)
         {
             throw new NotImplementedException();
         }
 
-        public IEnumerable<Ship> GetShip()
+        public IEnumerable<Player> GetPlayer()
         {
             throw new NotImplementedException();
         }
 
-        public Ship GetShip(Guid shipId)
+        public Player GetPlayer(Guid playerId)
         {
             throw new NotImplementedException();
         }
 
-        public IEnumerable<Ship> GetShips(IEnumerable<Guid> shipId)
+        public IEnumerable<Player> GetPlayers(IEnumerable<Guid> playerId)
+        {
+            throw new NotImplementedException();
+        }
+
+        public bool PlayerExists(Guid playerId)
         {
             throw new NotImplementedException();
         }
@@ -37,12 +41,7 @@ namespace Hackathon_Newcastle.Repositories
             throw new NotImplementedException();
         }
 
-        public bool ShipExists(Guid shipId)
-        {
-            throw new NotImplementedException();
-        }
-
-        public void UpdateShip(Ship ship)
+        public void UpdatePlayer(Player player)
         {
             throw new NotImplementedException();
         }
