@@ -20,7 +20,7 @@ window.Backend = (function () {
         }
             
         if (packet.type in handlers) {
-            for (let i = 0; i < handlers[packet.type]; i += 1) {
+            for (let i = 0; i < handlers[packet.type].length; i += 1) {
                 try {
                     handlers[packet.type][i](packet);
                 } catch (ex) {
@@ -38,10 +38,10 @@ window.Backend = (function () {
 
     function _on(type, handler) {
         if (!(type in handlers)) {
-            handlers[type] = {};
+            handlers[type] = [];
         }
 
-        hanlders[type].push(handler);
+        handlers[type].push(handler);
     }
 
     return {
@@ -51,3 +51,21 @@ window.Backend = (function () {
 
 })();
 
+Backend.on("chat", p => {
+
+    const div = document.createElement("div");
+    div.appendChild(document.createTextNode(p.text));
+
+    document.getElementById("output").appendChild(div);
+});
+
+document.getElementById("input").addEventListener("keyup", function (e) {
+    if (e.keyCode == 13) {
+        const message = this.value;
+        this.value = "";
+
+        Backend.send({ type: 'chat', text: message }); 
+    }
+
+    
+});
