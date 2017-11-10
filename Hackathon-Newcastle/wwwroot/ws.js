@@ -11,11 +11,24 @@ window.Backend = (function () {
     const handlers = {};
 
     ws.onmessage = (msg) => {
+        let packet;
         try {
-            const packet = JSON.parse(msg.data);
-
+            packet = JSON.parse(msg.data);
         } catch (ex) {
             console.warn("Bad JSON from the server, ignoring", msg);
+            return;
+        }
+            
+        if (packet.type in handlers) {
+            for (let i = 0; i < handlers[packet.type]; i += 1) {
+                try {
+                    handlers[packet.type][i](packet);
+                } catch (ex) {
+                    console.error("Problem in handler", ex);
+                }
+            }
+        } else {
+            console.log("Ignored packet", packet);
         }
     };
 
